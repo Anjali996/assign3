@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bill Spill</title>
+	<link rel="stylesheet" href="bill.css">
+</head>
+<body>
+	<div id="flex-container">
+		<h1 >Bill <br>Spill</h1>
+
+
+		<div id="box">
+            
+			<div id="left-section">
+				<label>Bill</label><br>
+
+				<input type="text" placeholder="₹ 0" id="bill-input" oninput="calculateBill()"><br><br><br>
+				<label>Select Tip %</label><br>
+
+				<button class="tip-percent" onclick="calculateBill(5)">5%</button>
+				<button class="tip-percent" onclick="calculateBill(10)">10%</button>
+				<button class="tip-percent" onclick="calculateBill(15)">15%</button><br><br>
+				<button class="tip-percent" onclick="calculateBill(25)">25%</button>
+				<button class="tip-percent" onclick="calculateBill(50)">50%</button>
+				<button class="tip-percent" onclick="calculateBill(75)">75%</button><br><br><br>
+				
+				
+				<label>Number of people</label><br>
+
+                
+				<input type="number" value="1" id="people-input" oninput="calculateBill()">
+				<!--<div class="counter" >
+					<p id="count" align="center">0</p>
+					
+						<button id="add">Increament</button>
+						
+						<button id="sub">Decrement</button>
+					</div>
+				</div>-->
+			</div>
+
+
+			<div id="right-section">
+
+                <table >
+                    <tr >
+                        <td id="a1">
+                            Tip Amount<p><h6>/ person</p>
+                        </td>
+
+                        <td>
+
+                          <h4 id="tip-per-person"  style="text-align: center; font-size: larger; " >₹ 0.00</h4>  
+
+                        </td>
+                    </tr>
+                   
+
+                    <tr >
+                        <td>
+                            Total Amount<p><h6>/ person</p>
+                        </td>
+
+                        <td>
+
+                            <h4 id="total-per-person" style="text-align: center; font-size: larger; ">₹ 0.00</h4>
+
+                        </td>
+                    </tr>
+                    <tr >
+                        <td colspan="2>
+                            <button id="reset" onclick="reset()" align="center" style="cursor: pointer;">Reset</button> 
+                        </td>
+
+                    </tr>
+                    
+                </table>
+				
+                
+                
+                <!--<div id="right-part-1">
+					<div>
+					<div id="tip-per-person">₹ 0.00</div>
+				</div>
+
+
+				<div id="right-part-2">
+					<div>Total Amount <br><p>/ person</div></p>
+					<div id="total-per-person">₹ 0.00</div>
+				</div>
+
+				<button id="reset" onclick="reset()">Reset</button> -->
+			</div>
+		</div>
+	</div>
+	<script src="billspill.js"></script>
+</body>
+</html>
